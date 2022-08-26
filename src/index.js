@@ -56,15 +56,15 @@ function checkUrlAvailability(botResponse, urlToCheck) {
 
 const logger = createLogger();
 
-if (!process.env.4fb633936ba7e2e3-98b0ee034617e1a0-705e679ede1010ca) {
+if (!process.env.VIBER_PUBLIC_ACCOUNT_ACCESS_TOKEN_KEY) {
     logger.debug('Could not find the Viber account access token key in your environment variable. Please make sure you followed readme guide.');
     return;
 }
 
 // Creating the bot with access token, name and avatar
 const bot = new ViberBot(logger, {
-    authToken: process.env.4fb633936ba7e2e3-98b0ee034617e1a0-705e679ede1010ca, // Learn how to get your access token at developers.viber.com
-    name: "KoviSK",
+    authToken: process.env.VIBER_PUBLIC_ACCOUNT_ACCESS_TOKEN_KEY, // Learn how to get your access token at developers.viber.com
+    name: "Is It Up",
     avatar: "https://raw.githubusercontent.com/devrelv/drop/master/151-icon.png" // Just a placeholder avatar to display the user
 });
 
